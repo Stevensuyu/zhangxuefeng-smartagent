@@ -113,7 +113,7 @@ app.include_router(system_router)
 app.include_router(chat_router, prefix="/api")
 app.include_router(session_router, prefix="/api")
 app.include_router(profile_router, prefix="/api")
-app.include_router(config_router)
+app.include_router(config_router, prefix="/api")
 
 # 数据查询路由（原有 routers/ 目录）
 app.include_router(schools_router, prefix="/api")

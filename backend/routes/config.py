@@ -20,7 +20,7 @@ class AIConfig(BaseModel):
     model: str = Field(default="gpt-4o-mini", description="模型名称")
 
 
-@router.get("/api/config")
+@router.get("/config")
 async def get_config():
     """获取当前AI配置"""
     settings = get_settings()
@@ -32,7 +32,7 @@ async def get_config():
     }
 
 
-@router.post("/api/config")
+@router.post("/config")
 async def save_config(config: AIConfig):
     """保存AI配置（仅在会话级别临时生效）"""
     logger.info(f"AI配置更新: model={config.model}, base_url={config.base_url}, has_api_key={bool(config.api_key)}")
