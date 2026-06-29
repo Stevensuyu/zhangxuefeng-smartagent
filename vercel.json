@@ -4,7 +4,7 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "frontend/dist"
       }
     },
     {
@@ -23,10 +23,14 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/dist/$1"
+      "dest": "/frontend/dist/$1",
+      "fallthrough": true
     }
   ],
   "env": {
-    "PYTHONPATH": "."
+    "PYTHONPATH": ".",
+    "OPENAI_API_KEY": "@openai-api-key",
+    "REDIS_URL": "@redis-url",
+    "DATABASE_URL": "@database-url"
   }
 }

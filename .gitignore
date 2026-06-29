@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 环境变量
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 数据
+data/
+*.db
+*.sqlite
+backend/chroma_data/
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 测试
+.coverage
+htmlcov/
+.pytest_cache/
+e2e/playwright-report/
+
+# mypy
+.mypy_cache/
+
+# TypeScript / frontend
+*.tsbuildinfo
+node_modules/
+frontend/node_modules/
+miniapp/node_modules/
+e2e/node_modules/
+backend/*.db
+
+# Local tool indexes and caches
+.codegraph/
+.omc/
+.serena/

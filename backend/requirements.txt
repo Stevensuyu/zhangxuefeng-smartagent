@@ -1,0 +1,10 @@
+# Deprecated: install backend dependencies from the project root with pyproject.toml.
+#
+# Development:
+#   pip install -e ".[dev]"
+#
+# Development with LangChain/RAG extras:
+#   pip install -e ".[dev,langchain]"
+#
+# Docker and CI already use pyproject.toml. Keep this file as a pointer only so
+# dependency versions do not drift between installation paths.
